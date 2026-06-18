@@ -4,8 +4,11 @@
 // Then update your store.js to use these functions.
 // ─────────────────────────────────────────────────────────────────────────────
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const BASE_URL = import.meta.env.VITE_API_URL;
 
+if (!BASE_URL) {
+  console.error('❌ VITE_API_URL is not set! Check your .env file or Vercel env vars.');
+}
 // ── Helper: get stored JWT ────────────────────────────────────────────────────
 const getToken = () => localStorage.getItem('token');
 
