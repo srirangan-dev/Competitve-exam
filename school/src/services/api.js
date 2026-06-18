@@ -4,7 +4,7 @@
 // Then update your store.js to use these functions.
 // ─────────────────────────────────────────────────────────────────────────────
 
-const BASE_URL = import.meta.env.VITE_API_URL;
+const BASE_URL = import.meta.env.VITE_API_URL || 'https://competitve-exam.onrender.com/api';
 
 if (!BASE_URL) {
   console.error('❌ VITE_API_URL is not set! Check your .env file or Vercel env vars.');
