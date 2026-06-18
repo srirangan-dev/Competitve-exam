@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 
-const API_BASE = 'http://localhost:5000/api';
+// ✅ FIXED: Use environment variable or Render backend URL
+const API_BASE = process.env.REACT_APP_API_URL || 'https://competitve-exam.onrender.com/api';
 
 // ===== Auth Store =====
 export const useAuthStore = create((set) => ({
