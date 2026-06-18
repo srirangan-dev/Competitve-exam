@@ -4,8 +4,11 @@ const rateLimit = require('express-rate-limit');
 const { body, validationResult } = require('express-validator');
 const Groq = require('groq-sdk');
 
+
 const { protect } = require('../middleware/auth');
 const ChatSession = require('../models/ChatMessage');
+
+
 
 // Init Groq client
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
