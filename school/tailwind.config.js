@@ -7,6 +7,8 @@ export default {
         sans: ['Inter', 'sans-serif'],
         display: ['Poppins', 'sans-serif'],
       },
+
+      
       
       colors: {
         primary: {
